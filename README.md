@@ -32,5 +32,5 @@ Dados vindos da API entram na tela como texto (`textContent`), nunca como HTML.
 ## Estado do projeto
 
 - [x] Etapa 1: base, PWA, identidade visual e tela inicial
-- [ ] Etapa 2: login, cadastro e área do paciente
+- [x] Etapa 2: login (e-mail ou CPF), cadastro de paciente, home e perfil do paciente
 - [ ] Etapa 3: agendamento e painéis de profissional/administrador

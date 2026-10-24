@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil | OrtoFisio+</title>
+  <meta name="theme-color" content="#f8faf7">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <main class="tela tela--home">
+    <header class="home__topo">
+      <div>
+        <h1 class="home__ola">Meu perfil</h1>
+        <p class="home__sub">Seus dados de acesso</p>
+      </div>
+      <img class="home__logo" src="icons/logo.svg" alt="OrtoFisio+" width="32" height="32">
+    </header>
+
+    <dl class="perfil-dados">
+      <div><dt>Nome</dt><dd id="p-nome"></dd></div>
+      <div><dt>E-mail</dt><dd id="p-email"></dd></div>
+    </dl>
+
+    <button id="btn-sair" class="btn btn--grande btn--bloco perfil-sair" type="button">Sair</button>
+  </main>
+  <script type="module" src="js/pages/perfil.js"></script>
+</body>
+</html>

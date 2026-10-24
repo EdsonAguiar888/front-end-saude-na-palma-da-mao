@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início | OrtoFisio+</title>
+  <meta name="theme-color" content="#f8faf7">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <main class="tela tela--home">
+    <header class="home__topo">
+      <div>
+        <h1 id="saudacao" class="home__ola">Olá!</h1>
+        <p class="home__sub">Como podemos ajudar hoje?</p>
+      </div>
+      <img class="home__logo" src="icons/logo.svg" alt="OrtoFisio+" width="32" height="32">
+    </header>
+
+    <section class="home__destaque" aria-label="Mensagem">
+      <img src="icons/ui/mao-coracao.png" alt="" width="96" height="96">
+      <div>
+        <p class="home__destaque-titulo">Cuidar também é informação.</p>
+        <p class="home__destaque-texto">Estamos aqui para te ajudar a dar o próximo passo.</p>
+      </div>
+    </section>
+
+    <h2 class="home__pergunta">O que você precisa fazer?</h2>
+
+    <nav class="home__acoes" aria-label="Ações">
+      <a class="acao" id="acao-triagem" href="#">
+        <span class="acao__circulo" style="--fundo:#a7d7c5"><img src="icons/ui/triagem.png" alt="" width="49" height="49"></span>
+        <span class="acao__texto"><strong>Fazer pré-triagem</strong><span>Conte o que está sentindo e receba orientação.</span></span>
+      </a>
+      <a class="acao" href="agendamento.html">
+        <span class="acao__circulo" style="--fundo:#e7d9f9"><img src="icons/ui/agendar.svg" alt="" width="36" height="37"></span>
+        <span class="acao__texto"><strong>Agendar atendimento</strong><span>Busque uma especialidade e escolha o melhor horário.</span></span>
+      </a>
+      <a class="acao" href="agendamentos.html">
+        <span class="acao__circulo" style="--fundo:#cbe9f8"><img src="icons/ui/consultar.png" alt="" width="45" height="45"></span>
+        <span class="acao__texto"><strong>Consultar agendamento</strong><span>Veja seus atendimentos já marcados.</span></span>
+      </a>
+    </nav>
+  </main>
+  <script type="module" src="js/pages/home.js"></script>
+</body>
+</html>
