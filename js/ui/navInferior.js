@@ -25,3 +25,9 @@ export function montarNavInferior(ativa) {
   document.body.append(nav);
   return nav;
 }
+
+// Remove a barra (telas do fluxo que usam Voltar/Continuar no lugar dela).
+export function removerNavInferior() {
+  document.querySelector(".nav-inferior")?.remove();
+  document.body.classList.remove("com-nav-inferior");
+}
