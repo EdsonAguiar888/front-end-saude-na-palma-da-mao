@@ -18,6 +18,9 @@ export const toClinica = (c) => ({
   ]
     .filter(Boolean)
     .join(" - "),
+  // Partes do endereço, para cartões que mostram uma linha por informação.
+  ruaNumero: [c.logradouro, c.numero].filter(Boolean).join(", "),
+  cidadeUf: [c.cidade, c.uf].filter(Boolean).join("/"),
   ativo: c.ativo !== false,
 });
 
