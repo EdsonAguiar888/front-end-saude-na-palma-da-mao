@@ -36,6 +36,15 @@ export function formatarData(data) {
   });
 }
 
+// "2026-09-15" -> "15 de setembro de 2026 (terça-feira)"
+export function formatarDataLonga(data) {
+  const [y, m, d] = data.split("-").map(Number);
+  const dt = new Date(y, m - 1, d);
+  const mes = dt.toLocaleDateString("pt-BR", { month: "long" });
+  const dia = dt.toLocaleDateString("pt-BR", { weekday: "long" });
+  return `${d} de ${mes} de ${y} (${dia})`;
+}
+
 export function formatarDataCurta(data) {
   const [y, m, d] = data.split("-");
   return `${d}/${m}/${y}`;
