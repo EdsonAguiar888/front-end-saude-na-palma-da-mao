@@ -1,4 +1,4 @@
-# OrtoFisio+: Front-end Web (MVP)
+# TriaOrto+: Front-end Web (MVP)
 
 Ortopedia e Fisioterapia Ortopédica. Front-end em **HTML, CSS e JavaScript puro (módulos ES)**, PWA, mobile-first
 e com foco em acessibilidade (fonte grande, alvos de toque de 48 px, contraste alto, modo escuro automático).
@@ -27,7 +27,7 @@ para os celulares receberem os arquivos novos.
 index.html (início)
  ├─ Entrar    -> login.html (e-mail ou CPF + senha) -> paciente: home.html | profissional/administrador: clinicas.html
  └─ Cadastrar -> cadastro.html (etapa 1 de 2: dados pessoais; etapa 2 de 2: contato e acesso) -> login.html
-home.html (paciente) -> pré-triagem (em breve) | agendamento.html | agendamentos.html
+home.html (paciente) -> pretriagem.html (formulário e resultado) -> agendamento.html (5 passos + "Pronto!") | agendamentos.html
 barra inferior do paciente: Início (home.html), Agendamentos (agendamentos.html), Perfil (perfil.html)
 ```
 
@@ -73,7 +73,7 @@ coloque os arquivos em `css/fonts/`, declare `@font-face` em `base.css` e inclua
 
 | Perfil | Telas |
 |---|---|
-| Paciente | Início (home), Agendar consulta (assistente de 6 passos), Meus agendamentos, Perfil. A lista de Clínicas continua em `clinicas.html`, mas não tem atalho no design |
+| Paciente | Início (home), Pré-triagem, Agendar consulta (assistente de 5 passos: especialidade, local, profissional, data, horário), Meus agendamentos, Perfil. A lista de Clínicas continua em `clinicas.html`, mas não tem atalho no design |
 | Profissional | Clínicas, Meus horários (disponibilidade), Minha agenda (confirmar, concluir, cancelar) |
 | Administrador | Clínicas, Profissionais (cadastro completo), Horários, Agendamentos |
 

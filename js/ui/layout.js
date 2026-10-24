@@ -50,9 +50,9 @@ export function montarLayout(s) {
       { class: "topo__barra" },
       h(
         "a",
-        { class: "topo__marca", href: paginaInicial(s.tipo), "aria-label": "OrtoFisio+, ir para o início" },
+        { class: "topo__marca", href: paginaInicial(s.tipo), "aria-label": "TriaOrto+, ir para o início" },
         h("img", { src: "icons/logo.svg", alt: "", width: "30", height: "30" }),
-        h("span", {}, "OrtoFisio", h("span", {}, "+")),
+        h("span", {}, "TriaOrto", h("span", {}, "+")),
       ),
       h(
         "div",
