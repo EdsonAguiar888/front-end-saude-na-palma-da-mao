@@ -40,4 +40,9 @@ export const agendamentoService = {
   async alterarStatus(id, status) {
     await agendamentos.atualizar(id, { status });
   },
+
+  // Cancelamento pelo profissional: muda o status e grava a justificativa em "observacao".
+  async cancelarComJustificativa(id, observacao) {
+    await agendamentos.atualizar(id, { status: "CANCELADO", observacao });
+  },
 };
