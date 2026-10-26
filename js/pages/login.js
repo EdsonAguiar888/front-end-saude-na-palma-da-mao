@@ -40,7 +40,10 @@ function iniciar() {
       const dados = await comBotaoOcupado($("button[type=submit]", form), "Entrando...", () =>
         authService.login(identificador, senha, { lembrar: $("#lembrar").checked }),
       );
-      location.href = paginaInicial(dados.tipo);
+      toast("Login realizado com sucesso! Entrando...", "sucesso");
+      setTimeout(() => {
+        location.href = paginaInicial(dados.tipo);
+      }, 400);
     } catch (err) {
       erro.textContent = err.message;
     }
