@@ -110,3 +110,72 @@
 .pub-login__cadastro { margin: 33px 0 32px; text-align: center; font-size: 14px; line-height: 20px; color: var(--pub-texto2); }
 .pub-login__cadastro a { font-weight: 700; color: var(--cor-primaria); text-decoration: none; }
 .pub-login__cadastro a:hover { text-decoration: underline; }
+
+/* ---------- Cadastro do paciente (Figma: Cadastro 1, 2 e 3) ----------
+   Medidas do Figma (frame 390 px): topo 12/16 com borda de 1 px, corpo com 24 px de margem e 20 px entre blocos,
+   campos com 16 px entre si e 6 px entre rótulo e caixa. Fonte do Figma: Sora 400/600/700 (SIL OFL, arquivos em css/fonts). */
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/sora-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/sora-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/sora-latin-700-normal.woff2") format("woff2"); }
+.pub-cad {
+  --cad-linha: #f3f4f6;
+  --cad-borda-preenchido: #e5e7eb;
+  --cad-placeholder: rgb(31 41 55 / 0.5);
+  --cad-btn-off: #d1d5db;
+  --cad-btn-off-texto: #6b7280;
+  padding: 0;
+  font-family: "Sora", "Plus Jakarta Sans", "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) .pub-cad {
+    --cad-linha: #1c332e; --cad-borda-preenchido: #3a5a53; --cad-placeholder: rgb(230 242 239 / 0.5);
+    --cad-btn-off: #2c3b38; --cad-btn-off-texto: #8ea29c;
+  }
+}
+.pub-cad__topo {
+  display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+  background: var(--cor-fundo); border-bottom: 1px solid var(--cad-linha);
+}
+.pub-cad__voltar {
+  width: 44px; height: 44px; min-width: 44px; min-height: 44px; flex: none; padding: 0; border: 0; border-radius: 50%;
+  display: grid; place-items: center; background: var(--pub-tile); color: var(--cor-primaria); cursor: pointer;
+}
+.pub-cad__voltar svg { width: 20px; height: 20px; }
+.pub-cad__voltar:hover { background: var(--cor-realce); }
+.pub-cad__titulo { flex: 1; min-width: 0; margin: 0; text-align: center; font-size: 16px; line-height: 24px; font-weight: 600; color: var(--cor-texto); }
+.pub-cad__selo { width: 40px; height: 40px; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--pub-tile); }
+.pub-cad__selo img { width: 18px; height: 18px; }
+
+.pub-cad__corpo { flex: 1; display: flex; flex-direction: column; gap: 20px; padding: 24px; }
+.pub-cad__form { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+.pub-cad__etapa { display: flex; flex-direction: column; gap: 20px; }
+.pub-cad__pilula {
+  align-self: stretch; padding: 2px 8px; border-radius: 999px; background: var(--pub-tile);
+  font-size: 12px; line-height: 16px; font-weight: 600; color: var(--cor-primaria);
+}
+.pub-cad__cabeca { display: flex; flex-direction: column; }
+.pub-cad__h2 { margin: 4px 0 0; font-size: 20px; line-height: 28px; font-weight: 700; color: var(--cor-texto); }
+.pub-cad__sub { margin: 4px 0 0; font-size: 14px; line-height: 20px; color: var(--pub-texto2); }
+.pub-cad__campos { display: flex; flex-direction: column; gap: 16px; }
+.pub-cad__campo { display: flex; flex-direction: column; gap: 6px; }
+.pub-cad__campo label { font-size: 14px; line-height: 20px; font-weight: 600; color: var(--cor-texto); }
+.pub-cad__campo input {
+  display: block; width: 100%; height: 54px; padding: 14px 16px; border: 1px solid var(--pub-borda); border-radius: 12px;
+  background: var(--cor-superficie); color: var(--cor-texto); font-family: inherit; font-size: 16px; line-height: 24px;
+  -webkit-appearance: none; appearance: none;
+}
+.pub-cad__campo input::placeholder { color: var(--cad-placeholder); opacity: 1; }
+.pub-cad__campo input.is-preenchido { border-color: var(--cad-borda-preenchido); }
+.pub-cad__campo input:focus-visible { outline: 3px solid var(--cor-realce); outline-offset: 1px; border-color: var(--cor-primaria); }
+.pub-cad__campo input.is-preenchido:user-invalid { border-color: var(--cor-erro); }
+.pub-cad__acoes { margin-top: auto; display: flex; flex-direction: column; }
+.pub-cad__acoes .erro-form { margin: 0 0 12px; text-align: center; }
+.pub-cad__acoes .erro-form:empty { display: none; }
+.pub-cad__btn {
+  width: 100%; min-height: 56px; padding: 16px; border: 0; border-radius: 16px; background: var(--cor-primaria); color: #fff;
+  font-family: inherit; font-size: 16px; line-height: 24px; font-weight: 600; text-align: center; cursor: pointer;
+}
+.pub-cad__btn:hover:not(:disabled) { background: var(--cor-primaria-escura); }
+.pub-cad__btn:disabled { background: var(--cad-btn-off); color: var(--cad-btn-off-texto); cursor: not-allowed; }
+.pub-cad__btn:focus-visible { outline: 3px solid var(--cor-realce); outline-offset: 2px; }
+@media (prefers-color-scheme: dark) { :root:not([data-tema="claro"]) .pub-cad__btn:not(:disabled) { color: #06231e; } }
