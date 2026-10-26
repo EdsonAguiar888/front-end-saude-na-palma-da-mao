@@ -1,3 +1,7 @@
+/* Fontes locais (mesmas de publica.css): funcionam offline e não consultam o Google. */
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/sora-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/sora-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Sora"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/sora-latin-700-normal.woff2") format("woff2"); }
 /* Telas do profissional. Medidas, cores e fonte extraídas do Figma (arquivo App-PI, "FLUXO DO PROFISSIONAL").
    Fonte: Sora (carregada pelo <link> do Google Fonts em cada prof-*.html; sem rede usa a fonte do sistema).
    Estas telas seguem o design do Figma, que só existe em tema claro. */
