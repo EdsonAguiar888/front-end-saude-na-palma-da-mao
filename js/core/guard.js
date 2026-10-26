@@ -7,7 +7,8 @@ export const PERFIS = {
 };
 
 // Tela inicial de cada perfil depois do login.
-export const paginaInicial = (tipo) => (tipo === PERFIS.PACIENTE ? "home.html" : "clinicas.html");
+export const paginaInicial = (tipo) =>
+  tipo === PERFIS.PACIENTE ? "home.html" : tipo === PERFIS.PROFISSIONAL ? "prof-home.html" : "clinicas.html";
 
 // Protege uma página. Retorna a sessão, ou null se redirecionou.
 // Atenção: isto é conveniência de interface, não segurança. Quem protege
